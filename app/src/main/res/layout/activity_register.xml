@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Регистрация"
+        android:textSize="24sp"
+        android:layout_gravity="center"/>
+    <!-- TextView для предупреждения о неверном формате email -->
+    <TextView
+        android:id="@+id/tvEmailError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Введите корректный email"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/etEmailRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/etPasswordRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Пароль"
+        android:inputType="textPassword"/>
+
+    <!-- TextView для предупреждения о недостаточной длине пароля -->
+    <TextView
+        android:id="@+id/tvPasswordError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пароль должен содержать минимум из 8 символов"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="gone"/>
+
+    <!-- TextView для предупреждения, если пароль состоит только из цифр -->
+    <TextView
+        android:id="@+id/tvPasswordNumericError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пароль не может состоять только из цифр"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Подтвердите пароль"
+        android:inputType="textPassword"/>
+
+    <!-- TextView для предупреждения о несовпадении паролей -->
+    <TextView
+        android:id="@+id/tvConfirmPasswordError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пароли не совпадают"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Зарегистрироваться"/>
+
+    <TextView
+        android:id="@+id/tvGoToLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Уже есть аккаунт? Войдите"
+        android:textColor="@color/teal_200"
+        android:layout_gravity="center"
+        android:paddingTop="16dp"/>
+</LinearLayout>
